@@ -1,5 +1,5 @@
 <?php
-include_once './database.php';
+include_once 'database.php';
 
 $username = $_POST['username'];
 $email = $_POST['email'];
@@ -10,14 +10,15 @@ if (!empty($username) && !empty($email) && !empty($pass))
 
     
     //$pass = sha1($pass1.$salt);
-    $pass = password_hash($pass, PASSWORD_DEFAULT);
-    
+    $pas = password_hash($pass, PASSWORD_DEFAULT);
+    echo $pass;
+
     $query = "INSERT INTO uporabniki (username,email,pass) "
             . "VALUES (?,?,?)";
     $stmt = $pdo->prepare($query);
-    $stmt->execute([$username,$email,$pass]);
+    $stmt->execute([$username,$email,$pas]);
     
-    header("Location: login.html");
+    header("Location: login.php");
 }
 else {
     header("Location: login.php");

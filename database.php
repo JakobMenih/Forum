@@ -2,9 +2,9 @@
 
 $host="localhost";
 $user="jakobmen_forum";
-$pass="JakobM123";
-$db="jakobmen_forum";
-$charset = 'utf8mb4';
+$password="JakobM123";
+$database="jakobmen_forum";
+
 
 
 $link = mysqli_connect($host, $user, $password) or 
@@ -16,7 +16,5 @@ $link = mysqli_connect($host, $user, $password) or
 	 
 	 
 	 mysqli_set_charset($link, "utf8");
-	 
-$salt = 'lerkjth654dgk%$#$#FG';
 
 ?>
