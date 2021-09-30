@@ -6,19 +6,17 @@ $pass="JakobM123";
 $db="jakobmen_forum";
 $charset = 'utf8mb4';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
-try {
-     $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
-}
 
-
+$link = mysqli_connect($host, $user, $password) or 
+     die("Povezava na streznik ni uspela.");
+	 
+	 
+	 mysqli_select_db($link, $database) or 
+	 die("Povezava na bazo ni uspela.");
+	 
+	 
+	 mysqli_set_charset($link, "utf8");
+	 
 $salt = 'lerkjth654dgk%$#$#FG';
 
 ?>

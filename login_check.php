@@ -2,7 +2,7 @@
 session_start();
 include_once './database.php';
 $username = $_POST['username'];
-$pass = $_POST['geslo'];
+$pass = $_POST['pass'];
 //preverim, če sem prejel podatke
 if (!empty($email) && !empty($pass)) {
     //$pass = sha1($pass.$salt);
@@ -13,7 +13,7 @@ if (!empty($email) && !empty($pass)) {
     
     if ($stmt->rowCount() == 1) {
         $user = $stmt->fetch();
-        if (password_verify($pass, $user['geslo'])) {
+        if (password_verify($pass, $user['pass'])) {
             $_SESSION['uporabnik_id'] = $uporabnik['id'];        
             $_SESSION['admin'] = $user['admin'];        
             header("Location: index.php");
@@ -21,5 +21,5 @@ if (!empty($email) && !empty($pass)) {
         }
     }
 }
-header("Location: login.php");
+header("Location: login.html");
 ?>
