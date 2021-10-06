@@ -4,8 +4,8 @@ include_once './header.php';
 
 <h1>Registracija</h1>
 
-<form action="user_insert.php" method="post">
-    <input type="text" name="username" class="form-control mb-4" placeholder="Vnesi uporabniško ime" required="required" />
+<form action="registracija_baza.php" method="post">
+    <input type="text" name="username" class="form-control mb-4" placeholder="Vnesi ime" required="required" />
     <input type="email" name="email" class="form-control mb-4" placeholder="Vnesi e-pošto" required="required" />
     <input type="password" name="pass" class="form-control mb-4" placeholder="Vnesi geslo" required="required" />
     <input type="submit" value="Shrani" />
