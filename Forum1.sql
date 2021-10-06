@@ -4,8 +4,9 @@ CREATE TABLE `uporabniki`
 (
   `id` Int NOT NULL AUTO_INCREMENT,
   `username` Varchar(200) NOT NULL,
-  `geslo` Varchar(200) NOT NULL,
   `email` Varchar(200) NOT NULL,
+  `pass` Varchar(200) NOT NULL,
+  `admin` Int, 
   PRIMARY KEY (`id`)
 )
 ;
