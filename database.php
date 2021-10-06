@@ -1,11 +1,9 @@
 <?php
 
 $host="localhost";
-$user="jakobmen_forum";
+$user="menihtop_forum";
 $password="JakobM123";
-$database="jakobmen_forum";
-
-
+$database="menihtop_forum";
 
 $link = mysqli_connect($host, $user, $password) or 
      die("Povezava na streznik ni uspela.");
