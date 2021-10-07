@@ -14,8 +14,8 @@ include_once './session.php';
 
 <?php
     if(isset($_SESSION['username'])){
-        $imeu=$_SESSION['username'];
-    echo '<a color= white;>Prijavljeni ste kot: '.$username.' </a>';
+        $username=$_SESSION['username'];
+    echo '<a color= white;>Prijavljeni ste kot: '.$username. ' </a>';
     echo '<a ="active" href="logout.php">ODJAVA</a>';
     }
 
