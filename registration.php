@@ -30,6 +30,15 @@ include_once './header.php';
 </div>
 
 
+<<<<<<< HEAD
+=======
+<form action="registracija_baza.php" method="post">
+    <input type="text" name="username" class="form-control mb-4" placeholder="Vnesi ime" required="required" />
+    <input type="email" name="email" class="form-control mb-4" placeholder="Vnesi e-pošto" required="required" />
+    <input type="password" name="pass" class="form-control mb-4" placeholder="Vnesi geslo" required="required" />
+    <input type="submit" value="Shrani" />
+</form>
+>>>>>>> b45bb3289c17e9a7fb22cb81c6899eb9114b16dc
 
 <?php
 include_once './footer.php';
