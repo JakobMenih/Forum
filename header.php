@@ -12,5 +12,16 @@ include_once './session.php';
   <meta name="author" content="">
 </head>
 
-<a class="nav-link js-scroll-trigger" href="registration.php">Registracija</a>
-<a class="nav-link js-scroll-trigger" href="login.php">Prijava</a>
+<?php
+    if(isset($_SESSION['username'])){
+        $imeu=$_SESSION['username'];
+    echo '<a color= white;>Prijavljeni ste kot: '.$username.' </a>';
+    echo '<a ="active" href="logout.php">ODJAVA</a>';
+    }
+
+    else{
+    echo '<a class="prij" href="login.php"> PRIJAVA</a>';
+    echo '       ';
+    echo '<a class="regi" href="registration.php">REGISTRACIJA </a>';
+    }
+?>
