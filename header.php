@@ -12,7 +12,6 @@ include_once './session.php';
   <meta name="author" content="">
 </head>
 
-<<<<<<< HEAD
 <?php
     if(isset($_SESSION['username'])){
         $imeu=$_SESSION['username'];
@@ -26,7 +25,3 @@ include_once './session.php';
     echo '<a class="regi" href="registration.php">REGISTRACIJA </a>';
     }
 ?>
-=======
-<a class="nav-link js-scroll-trigger" href="registration.php">Registracija</a>
-<a class="nav-link js-scroll-trigger" href="login.php">Prijava</a>
->>>>>>> b45bb3289c17e9a7fb22cb81c6899eb9114b16dc
