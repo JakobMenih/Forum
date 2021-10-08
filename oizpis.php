@@ -30,6 +30,8 @@
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
             <div class="brand">My Forum</div>
         </div>
+<body>
+
         <!--SearchBox Section-->
 
     <div class="container">
@@ -47,55 +49,28 @@
 
             <div class="body">
                 <div class="authors">
-                <div class="koncert">
-                <h3>Uporabniki</h3>
-            </div>
-                </div>
-                <div class="content">
-                    <br>
-                <a class="koncerti" href="uizpis.php">Izpis uporabnikov</a><br>   
-            <a class="koncerti" href="aregist.php">Vnos uporabnikov</a><br>
+                <div class="tabela2">
+                <?php
+                $sql="SELECT * FROM objave o
+                INNER JOIN kategorije k ON k.idk=o.kategorija_ido
+                INNER JOIN uporabniki u ON u.idu=o.uporabnik_ido";
+                $result=mysqli_query($link,$sql);
+                echo '<table border="1">';
+                echo '<tr><th>Ime</th><th>Text</th><th>Datum</th><th>Kategorija</th><th>Uporabnik</th><th>Briši</th><th>Posodobi</th></tr>';
+                while ($row = mysqli_fetch_array($result)) {
+                echo '<tr>'.'<td>'
+                .$row['imeo'].'</td><td>'
+                .$row['texto'].'</td><td>'
+                .$row['datumo'].'</td><td>'
+                .$row['imek'].'</td><td>'
+                .$row['username'].'</td><td>'
+                .'<a href="odel.php?ajdi='.$row['ido'].'">briši</a>'.'</td><td>'
+                .'<a href="oupdat.php?ajdi='.$row['ido'].'">posodobi</a>'.'</td></tr>';
+                            }
+                echo '</table>';
+                ?>
                     </div>
                 </div>
-
-        <div class="body">
-                <div class="authors">
-                <div class="koncert">
-                <h3>Objave</h3>
-            </div>
-                </div>
-                <div class="content">
-                    <br>
-                <a class="koncerti" href="oizpis.php">Izpis objav</a><br>   
-            <a class="koncerti" href="ovnos.php">Vnos objav</a><br>
-                    </div>
-                </div>
-                <div class="body">
-                <div class="authors">
-                <div class="koncert">
-                <h3>Koncerti</h3>
-            </div>
-                </div>
-                <div class="content">
-                    <br>
-                <a class="koncerti" href="izpisk.php">Izpis koncertov</a><br>   
-            <a class="koncerti" href="vnos.php">Vnos koncertov</a><br>
-                    </div>
-                </div>
-
-        <div class="body">
-                <div class="authors">
-                <div class="koncert">
-                <h3>Koncerti</h3>
-            </div>
-                </div>
-                <div class="content">
-                    <br>
-                <a class="koncerti" href="izpisk.php">Izpis koncertov</a><br>   
-            <a class="koncerti" href="vnos.php">Vnos koncertov</a><br>
-                    </div>
-                </div>
-  
 <?php
-            require 'footer.php';
-            ?>
+require 'footer.php';
+?>

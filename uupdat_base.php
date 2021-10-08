@@ -10,9 +10,9 @@ $b=$_POST['jb'];
 
 $pas = password_hash($pass, PASSWORD_DEFAULT);
  
-$sql="UPDATE uporabniki SET username='$username', email='$email', pass='$hashp', admin='$admin' WHERE id='$b'";
+$sql="UPDATE uporabniki SET username='$username', email='$email', pass='$hashp', admin='$admin' WHERE idu='$b'";
 
    $result = mysqli_query($link, $sql);
 
-   header("Location: izpisu.php");
+   header("Location: uizpis.php");
 ?>

@@ -4,9 +4,9 @@ require 'database.php';
 
 $u = $_GET['ajdi'];
 
-$sql="DELETE FROM uporabniki WHERE id = $u";
+$sql="DELETE FROM uporabniki WHERE idu = $u";
 
 $result = mysqli_query($link,$sql);
 
-header("Location: izpisu.php");
+header("Location: uizpis.php");
 ?>

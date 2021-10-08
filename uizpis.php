@@ -61,8 +61,8 @@
                 .$row['email'].'</td><td>'
                 .$row['pass'].'</td><td>'
                 .$row['admin'].'</td><td>'
-                .'<a href="udel.php?ajdi='.$row['id'].'">briši</a>'.'</td><td>'
-                .'<a href="uupdat.php?ajdi='.$row['id'].'">posodobi</a>'.'</td></tr>';
+                .'<a href="udel.php?ajdi='.$row['idu'].'">briši</a>'.'</td><td>'
+                .'<a href="uupdate.php?ajdi='.$row['idu'].'">posodobi</a>'.'</td></tr>';
                             }
                 echo '</table>';
                 ?>
