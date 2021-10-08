@@ -15,15 +15,15 @@ $pass = $_POST['pass'];
         $_SESSION['id']=$row['id'];
         $_SESSION['username']=$row['username'];    
         $_SESSION['admin']=$row['admin'];
-        echo $_SESSION['admin'];
-        }      
+
         if($_SESSION['admin'] == 1){
-            header("Location: aindex.html");
-            }
-            else if($_SESSION['admin'] == 0){
-                header("Location: index.html");
-            }
-            else{
-            header("Location: login.php");
-            }
+            header("Location: aindex.php");
+        }
+        else{
+            header("Location: index.html");
+        }
+        }   
+        else {
+        header("Location: login.php");
+        }
 ?>

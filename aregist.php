@@ -10,10 +10,11 @@ include_once './header.php';
 
                     <h1>Registracija</h1>
                 <br>
-                <form action="user_insert.php" method="post">
+                <form action="admin_insert.php" method="post">
                     <input type="text" name="username" placeholder="Vnesi uporabniško ime" required="required" />
                     <input type="email" name="email" placeholder="Vnesi e-pošto" required="required" />
                     <input type="password" name="pass" placeholder="Vnesi geslo" required="required" />
+                    <input type="rang" name="admin" placeholder="Admin" /><br />
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />

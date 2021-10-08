@@ -1,6 +1,9 @@
 <?php
 include_once './header.php';
+include 'database.php';
+ 
 ?>
+
 
 <link rel="stylesheet" href="./login.css">
 <div class="container">
@@ -10,10 +13,17 @@ include_once './header.php';
 
                     <h1>Registracija</h1>
                 <br>
-                <form action="user_insert.php" method="post">
+            <?php
+            $sql="SELECT * FROM uporabniki ['ajdi']=i";
+            $result=mysqli_query($link,$sql);
+            $row = mysqli_fetch_array($result);
+            ?>
+                <form action="uupdat_base.php" method="post">
                     <input type="text" name="username" placeholder="Vnesi uporabniško ime" required="required" />
                     <input type="email" name="email" placeholder="Vnesi e-pošto" required="required" />
                     <input type="password" name="pass" placeholder="Vnesi geslo" required="required" />
+                    <input type="rang" name="admin" placeholder="Admin" /><br />
+		            <input type="hidden" name="jb" value="<?php echo $_GET['ajdi'];?>" />
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />
@@ -28,6 +38,10 @@ include_once './header.php';
 		</div>		
 	</div>
 </div>
+</div>		
+
+
+
 
 <?php
 include_once './footer.php';
