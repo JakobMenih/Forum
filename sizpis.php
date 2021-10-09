@@ -51,22 +51,22 @@
                 <div class="authors">
                 <div class="tabela2">
                 <?php
-                $sql="SELECT * FROM objave o
-                INNER JOIN kategorije k ON k.idk=o.kategorija_ido
+                $sql="SELECT * FROM slike s
+                INNER JOIN objave o ON o.ido=s.objava_ids
                 INNER JOIN uporabniki u ON u.idu=o.uporabnik_ido";
                 $result=mysqli_query($link,$sql);
                 echo '<table border="1">';
-                echo '<tr><th>Ime</th><th>Text</th><th>Datum</th><th>Kategorija</th><th>Uporabnik</th><th>Briši</th><th>Posodobi</th></tr>';
+                echo '<tr><th>Slika</th><th>Ime objave</th><th>Text objave</th><th>Datum objave</th><th>Username</th><th>Briši</th><th>Posodobi</th></tr>';
                 while ($row = mysqli_fetch_array($result)) {
                 echo '<tr>'.'<td>'
+                .$row['ids'].'</td><td>'
                 .$row['imeo'].'</td><td>'
                 .$row['texto'].'</td><td>'
                 .$row['datumo'].'</td><td>'
-                .$row['imek'].'</td><td>'
                 .$row['username'].'</td><td>'
-                .'<a href="odel.php?ajdi='.$row['ido'].'">briši</a>'.'</td><td>'
-                .'<a href="oupdate.php?ajdi='.$row['ido'].'">posodobi</a>'.'</td></tr>';
-                            }
+                .'<a href="sdel.php?ajdi='.$row['ids'].'">briši</a>'.'</td><td>'
+                .'<a href="supdate.php?ajdi='.$row['ids'].'">posodobi</a>'.'</td></tr>';
+                }
                 echo '</table>';
                 ?>
                     </div>

@@ -73,29 +73,38 @@
                 <div class="body">
                 <div class="authors">
                 <div class="koncert">
-                <h3>Koncerti</h3>
+                <h3>Slike</h3>
             </div>
                 </div>
                 <div class="content">
                     <br>
-                <a class="koncerti" href="izpisk.php">Izpis koncertov</a><br>   
-            <a class="koncerti" href="vnos.php">Vnos koncertov</a><br>
+                <a class="koncerti" href="sizpis.php">Izpis slik</a><br>
                     </div>
                 </div>
 
         <div class="body">
                 <div class="authors">
                 <div class="koncert">
-                <h3>Koncerti</h3>
+                <h3>Kategorije</h3>
             </div>
                 </div>
                 <div class="content">
                     <br>
-                <a class="koncerti" href="izpisk.php">Izpis koncertov</a><br>   
-            <a class="koncerti" href="vnos.php">Vnos koncertov</a><br>
+                <a class="koncerti" href="kizpis.php">Izpis kategorij</a><br>   
                     </div>
                 </div>
   
+                <div class="body">
+                <div class="authors">
+                <div class="koncert">
+                <h3>Komentarji</h3>
+            </div>
+                </div>
+                <div class="content">
+                    <br>
+                <a class="koncerti" href="koizpis.php">Izpis komentarjev</a><br>   
+                    </div>
+                </div>
 <?php
             require 'footer.php';
             ?>

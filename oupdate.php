@@ -11,7 +11,7 @@ include 'database.php';
 		<div class="screen__content">
 			<div class="login">
 
-                    <h1>Registracija</h1>
+                    <h1></h1>
                 <br>
             <?php
                             $sql="SELECT * FROM objave o
@@ -21,12 +21,20 @@ include 'database.php';
             $result=mysqli_query($link,$sql);
             $row = mysqli_fetch_array($result);
             ?>
-                <form action="uupdat_base.php" method="post">
-                    <input type="text" name="username" placeholder="Vnesi uporabniško ime" required="required" />
-                    <input type="email" name="email" placeholder="Vnesi e-pošto" required="required" />
-                    <input type="password" name="pass" placeholder="Vnesi geslo" required="required" />
-                    <input type="rang" name="admin" placeholder="Admin" /><br />
-		            <input type="hidden" name="jb" value="<?php echo $_GET['ajdi'];?>" />
+                <h2>Posodobitev igralca</h2>
+                <form action="oupdate_base.php" method="post">
+                <input type="text" name="imei" placeholder="Ime"><br />
+                <input type="text" name="priimeki" placeholder="Priimek"><br />
+                <input type="text" name="opisi" placeholder="Opis"/><br />
+                <select name="skupina_idi" id="skupina">
+                <option value="1">Lutkarji</option>
+                <option value="2">Pevci</option>
+                <option value="3">Majhen orkester</option>
+                <option value="4">Velik orkester</option>
+                <option value="5">Bobni</option>
+                <option value="6">Pihala</option>
+                </select></br>
+                <input type="hidden" name="ja" value="<?php echo $_GET['ajdi'];?>" />
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />
