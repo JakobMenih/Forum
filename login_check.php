@@ -20,7 +20,7 @@ $pass = $_POST['pass'];
             header("Location: aindex.php");
         }
         else{
-            header("Location: uindex.html");
+            header("Location: uindex.php");
         }
         }   
         else {

@@ -58,7 +58,7 @@
                 echo '<tr><th>Slika</th><th>Ime objave</th><th>Text objave</th><th>Datum objave</th><th>Briši</th></tr>';
                 while ($row = mysqli_fetch_array($result)) {
                 echo '<tr>'.'<td>'
-                .$row['urls'].'</td><td>'
+                .$row['url'].'</td><td>'
                 .$row['imeo'].'</td><td>'
                 .$row['texto'].'</td><td>'
                 .$row['datumo'].'</td><td>'

@@ -63,7 +63,7 @@
                 .$row['datumko'].'</td><td>'
                 .$row['imeo'].'</td><td>'
                 .$row['username'].'</td><td>'
-                .'<a href="odel.php?ajdi='.$row['ido'].'">briši</a>'.'</td></tr>';
+                .'<a href="kodel.php?ajdi='.$row['idko'].'">briši</a>'.'</td></tr>';
                             }
                 echo '</table>';
                 ?>

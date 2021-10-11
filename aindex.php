@@ -36,7 +36,7 @@
         <!--Navigation-->
         <div class="navigate">
         </div>
-
+        <a href="uindex.php">Glavna stran</a><br>   
         <!--Topic Section-->
         <div class="topic-container">
             <!--Original thread-->
@@ -67,7 +67,6 @@
                 <div class="content">
                     <br>
                 <a class="koncerti" href="oizpis.php">Izpis objav</a><br>   
-            <a class="koncerti" href="ovnos.php">Vnos objav</a><br>
                     </div>
                 </div>
                 <div class="body">

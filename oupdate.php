@@ -17,24 +17,28 @@ include 'database.php';
                             $sql="SELECT * FROM objave o
                             INNER JOIN kategorije k ON k.id=o.kategorija_id
                             INNER JOIN uporabniki u ON u.id=o.uporabnik_id";
-            $sql="SELECT * FROM uporabniki ['ajdi']=i";
+            $sql="SELECT * FROM objave ['ajdi']=o";
             $result=mysqli_query($link,$sql);
             $row = mysqli_fetch_array($result);
             ?>
-                <h2>Posodobitev igralca</h2>
+                <h2>Posodobitev objave</h2>
                 <form action="oupdate_base.php" method="post">
-                <input type="text" name="imei" placeholder="Ime"><br />
-                <input type="text" name="priimeki" placeholder="Priimek"><br />
-                <input type="text" name="opisi" placeholder="Opis"/><br />
-                <select name="skupina_idi" id="skupina">
-                <option value="1">Lutkarji</option>
-                <option value="2">Pevci</option>
-                <option value="3">Majhen orkester</option>
-                <option value="4">Velik orkester</option>
-                <option value="5">Bobni</option>
-                <option value="6">Pihala</option>
+                <input type="text" name="imeo" placeholder="Ime objave"><br />
+                <input type="text" name="texto" placeholder="Text objave"><br />
+                <select name="kategorija_ido" id="kategorija">
+                <option value="1">Tehnologija</option>
+                <option value="2">Narava</option>
+                <option value="3">Novice</option>
+                <option value="4">Politika</option>
+                <option value="5">Hrana</option>
+                <option value="6">Igre</option>
+                <option value="7">Popularno</option>
+                <option value="8">Živali</option>
+                <option value="9">Ljudje</option>
+                <option value="10">Industrija</option>
+                <option value="10">Drugo</option>
                 </select></br>
-                <input type="hidden" name="ja" value="<?php echo $_GET['ajdi'];?>" />
+                <input type="hidden" name="ou" value="<?php echo $_GET['ajdi'];?>" />
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />
