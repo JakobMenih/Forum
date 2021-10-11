@@ -10,7 +10,7 @@
   <p align="center">
     <br />
     <a href="https://github.com/JakobMenih/Forum"></a>
-    [https://www.forum.menih.top/](https://www.forum.menih.top/)
+https://www.forum.menih.top
     <br />
   </p>
 </div>
