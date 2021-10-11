@@ -1,5 +1,8 @@
 <?php
 include_once './header.php';
+include 'glava.php';
+include 'baza.php';
+include 'session.php';
 ?>
 
 <link rel="stylesheet" href="./login.css">

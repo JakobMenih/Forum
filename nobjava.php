@@ -26,6 +26,7 @@ include_once './header.php';
                 <option value="10">Industrija</option>
                 <option value="10">Drugo</option>
                 </select></br>
+                <input type="file" name="url" placeholder="vnesite sliko"><br>
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />
