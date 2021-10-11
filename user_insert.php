@@ -1,32 +1,17 @@
 <?php
-include_once 'database.php';
 
+require_once 'database.php';
+ 
 $username = $_POST['username'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];
-$rang = $_POST['rang'];
+$admin = $_POST['admin'];
 
-if ($rang == NULL){
-    $rang = '2';
-}
+$pas = password_hash($pass, PASSWORD_DEFAULT);
+ 
+ $sql = "INSERT INTO uporabniki VALUES(NULL,'$username','$email','$pas','$admin')";
 
-//preverim podatke, da so obvezi vnešeni
-if (!empty($username) && !empty($email) && !empty($pass))
+   $result = mysqli_query($link, $sql);
 
-    
-    //$pass = sha1($pass1.$salt);
-    $pas = password_hash($pass, PASSWORD_DEFAULT);
-
-    $query = "INSERT INTO uporabniki (username, email, pass) "
-            . "VALUES (?, ?, ?)";
-    //$stmt = $pdo->prepare($query);
-    //$stmt->execute([$username,$email,$pas]);
-
-    $query->execute([$username,$email,$pas]);
-
-    header("Location: login.php");
-}
-else{
-    echo $pass;
-}
+   header("Location: login.php");
 ?>
