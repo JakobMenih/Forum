@@ -30,6 +30,6 @@ header("Location: index.php");
 
 }
 else {
-header("Location: oglas.php");
+header("Location: nobjava.php");
 }
 ?>
