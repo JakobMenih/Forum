@@ -27,8 +27,10 @@ $u=$_SESSION['idu'];
                 <option value="10">Industrija</option>
                 <option value="10">Drugo</option>
                 </select></br>
+
                 <input type="file" name="slike" placeholder="Vnesi sliko"><br>
  				<input type="hidden" name="u" value="<?= $u ?>">
+
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />
