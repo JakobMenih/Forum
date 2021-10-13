@@ -1,5 +1,10 @@
 <?php
 include_once './header.php';
+include 'glava.php';
+include 'baza.php';
+include 'session.php';
+$o=$_GET['ajdi'];
+$u=$_SESSION['idu'];
 ?>
 
 <link rel="stylesheet" href="./login.css">
@@ -12,7 +17,8 @@ include_once './header.php';
                 <br>
                 <form action="kom_insert.php" method="post">
                     <input type="text" name="textko" placeholder="Vnesi komentar" required="required" />
-                    <br />
+					<input type="hidden" name="o" value="<?= $o ?>">
+ 					<input type="hidden" name="u" value="<?= $u ?>">
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />

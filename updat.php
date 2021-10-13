@@ -1,6 +1,7 @@
 <?php
 include_once './header.php';
 include 'database.php';
+$u=$_SESSION['idu'];
  
 ?>
 
@@ -11,19 +12,18 @@ include 'database.php';
 		<div class="screen__content">
 			<div class="login">
 
-                    <h1>Uredi</h1>
+                    <h1>Uredi profil</h1>
                 <br>
             <?php
-            $sql="SELECT * FROM uporabniki ['ajdi']=i";
+            $sql="SELECT * FROM uporabniki ['ajdi']=u";
             $result=mysqli_query($link,$sql);
             $row = mysqli_fetch_array($result);
             ?>
-                <form action="uupdate_base.php" method="post">
+                <form action="updat_base.php" method="post">
                     <input type="text" name="username" placeholder="Vnesi uporabniško ime" required="required" />
                     <input type="email" name="email" placeholder="Vnesi e-pošto" required="required" />
                     <input type="password" name="pass" placeholder="Vnesi geslo" required="required" />
-                    <input type="rang" name="admin" placeholder="Admin" /><br />
-		            <input type="hidden" name="ua" value="<?php echo $_GET['ajdi'];?>" />
+                    <input type="hidden" name="u" value="<?= $u ?>">
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />

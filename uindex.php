@@ -34,8 +34,10 @@
     <div class="container">
         <!--Navigation-->
         <div class="navigate">
-        </div>
-        <a href="nobjava.php?ajdi='.$row['ido']">Nova objava</a>
+        </div>        
+        <a href="updat.php">Spremeni profil</a><br><br><br>
+        <a href="nobjava.php">Nova objava</a><br>
+
 <br>
 <br>
         <!--Topic Section-->
@@ -46,37 +48,33 @@
                 <div class="content"></div>
             </div>
             <?php
-            $sql="SELECT * FROM objave o
-                INNER JOIN kategorije k ON k.idk=o.kategorija_ido
-                INNER JOIN uporabniki u ON u.idu=o.uporabnik_ido
-                INNER JOIN komentarji ko ON o.ido=ko.uporabnik_idko
-                INNER JOIN slike s ON o.ido
-                ORDER BY o.ido asc";
-            ?>
-            <div class="body">
-                <div class="authors">
-                <?php
-
-$result=mysqli_query($link,$sql);
-echo '<table id ="b" border="1">'  ;
-echo '<tr id="t"><th class="z" width="20%">j</th><th class="z"width="20%">s</th><th class="z" width="20%">c</th><th class="z" width="20%">b</th></tr>';
-while($row=mysqli_fetch_array($result))
-{
-    echo '<tr>'.'<td>Ime: '.$row['imeo'].'<br><br>Uporabnik: '.$row['username'].'<br><br>Kategorija: '.$row['imek'].'</td>'.'<td>
-  <table  >
-<tr><td class="a">Objava: '.$row['texto'].'</td><td>'.$row['datumo'].'</td><td>'.$row['username'].'</td></tr></tr><td>Komentar: '.$row['textko'].'</td><td>'.$row['datumko'].'</td><td>'.$row['username'].'</td>
-
-</table>
-
-
-<td class="a">'.'<img src="'.$row['url'].'" width="80%"  margin-left: auto;
-margin-right: auto; >'.'</td>'
-
-.'<td><a href="komvnos.php?ajdi='.$row['idk'].'">Dodaj komentar</a>'.'</td></tr>';;
-
-echo '</tr>';
+             $sql="SELECT * FROM objave o
+             INNER JOIN komentarji ko ON o.ido=ko.objava_idko
+             INNER JOIN uporabniki u ON u.idu=o.uporabnik_ido
+             INNER JOIN kategorije k ON k.idk=o.kategorija_ido";
+             ?>
+             <div class="body">
+                 <div class="authors">
+                 <?php
+ 
+ $result=mysqli_query($link,$sql);
+ echo '<table id ="b" border="1">'  ;
+ while($row=mysqli_fetch_array($result))
+ {
+     echo '<tr>'.'<td>Ime: '.$row['imeo'].'<br><br>Uporabnik: '.$row['username'].'<br><br>Kategorija: '.$row['imek'].'</td>'.'<td>
+ <table>
+ <tr><td class="a">Objava: '.$row['texto'].'</td><td>'.$row['datumo'].'</td></tr>
+ </tr><td>Komentar: '.$row['textko'].'</td><td>'.$row['datumko'].'</td><td>'.$row['username'].'</td>
+ 
+ </table>
+ 
+ <td class="a">'.'<img src="'.$row['url'].'" width="80%"  margin-left: auto;
+ margin-right: auto; >'.'</td>'
+ 
+ .'<td><a href="komvnos.php?ajdi='.$row['idk'].'">Dodaj komentar</a>'.'</td></tr>';
+ 
  }  
-echo '</table>';
+ echo '</table>';
 
 ?>
 </div>

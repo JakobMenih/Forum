@@ -1,5 +1,6 @@
 <?php
 include_once './header.php';
+$u=$_SESSION['idu'];
 ?>
 
 <link rel="stylesheet" href="./login.css">
@@ -13,7 +14,7 @@ include_once './header.php';
                 <form action="nobjava_check.php" method="post">
                 <input type="text" name="imeo" placeholder="Ime objave"><br />
                 <input type="text" name="texto" placeholder="Text objave"><br />
-                <select name="kategorija_ido" id="kategorija">
+                <select name="kategorija_ido" id="kategorija_ido">
                 <option value="1">Tehnologija</option>
                 <option value="2">Narava</option>
                 <option value="3">Novice</option>
@@ -26,6 +27,8 @@ include_once './header.php';
                 <option value="10">Industrija</option>
                 <option value="10">Drugo</option>
                 </select></br>
+                <input type="file" name="slike" placeholder="Vnesi sliko"><br>
+ 				<input type="hidden" name="u" value="<?= $u ?>">
                     <br>
                     <br>
                     <input type="submit" value="Shrani" />

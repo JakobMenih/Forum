@@ -31,7 +31,6 @@
             <div class="brand">My Forum</div>
         </div>
 <body>
-
         <!--SearchBox Section-->
 
     <div class="container">
@@ -64,7 +63,7 @@
                 ?>
                     </div>
                 </div>
-  
+
 <?php
 require 'footer.php';
 ?>

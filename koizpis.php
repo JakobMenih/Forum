@@ -56,11 +56,10 @@
                 INNER JOIN uporabniki u ON u.idu=ko.uporabnik_idko";
                 $result=mysqli_query($link,$sql);
                 echo '<table border="1">';
-                echo '<tr><th>Text</th><th>Datum</th><th>Objava</th><th>Uporabnik</th><th>Briši</th></tr>';
+                echo '<tr><th>Text</th><th>Objava</th><th>Uporabnik</th><th>Briši</th></tr>';
                 while ($row = mysqli_fetch_array($result)) {
                 echo '<tr>'.'<td>'
                 .$row['textko'].'</td><td>'
-                .$row['datumko'].'</td><td>'
                 .$row['imeo'].'</td><td>'
                 .$row['username'].'</td><td>'
                 .'<a href="kodel.php?ajdi='.$row['idko'].'">briši</a>'.'</td></tr>';

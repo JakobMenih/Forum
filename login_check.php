@@ -12,11 +12,12 @@ $pass = $_POST['pass'];
     $row = mysqli_fetch_array($result2);
         if(password_verify($pass, $row['pass'])) 
         {        
-        $_SESSION['id']=$row['id'];
+        $_SESSION['idu']=$row['idu'];
         $_SESSION['username']=$row['username'];    
         $_SESSION['admin']=$row['admin'];
 
         if($_SESSION['admin'] == 1){
+            define('jaki', TRUE);
             header("Location: aindex.php");
         }
         else{
